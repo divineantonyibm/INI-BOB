@@ -1,0 +1,9 @@
+// Import Carbon styles
+@use '@carbon/react';
+
+// Set background color
+body {
+  background: var(--background-or-layer-contextual, #161616);
+}
+
+// Made with Bob
