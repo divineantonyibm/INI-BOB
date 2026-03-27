@@ -1,43 +1,50 @@
-import { useState } from 'react';
 import {
-  Button,
   Header,
   HeaderName,
   HeaderGlobalBar,
   HeaderGlobalAction,
   Content,
   Theme,
-  Grid,
-  Column,
-  Tile,
-  TextInput,
 } from '@carbon/react';
-import { Notification, UserAvatar, Search } from '@carbon/icons-react';
+import {
+  Information,
+} from '@carbon/icons-react';
+import LeftNav from './components/LeftNav';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState('');
 
   return (
     <Theme theme="g100">
       <Header aria-label="INI Application">
-        <HeaderName href="#" prefix="IBM">
-          INI
+        <HeaderName href="#" className="site-name">
+          <span className="site-name__prefix">IBM </span>
+          <span className="site-name__title">Network Inteligence</span>
         </HeaderName>
         <HeaderGlobalBar>
-          <HeaderGlobalAction aria-label="Search" onClick={() => {}}>
-            <Search size={20} />
+          <HeaderGlobalAction
+            aria-label="Help"
+            onClick={() => {}}
+            tooltipAlignment="end"
+          >
+            <Information size={20} />
           </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="Notifications" onClick={() => {}}>
-            <Notification size={20} />
-          </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="User Avatar" onClick={() => {}}>
-            <UserAvatar size={20} />
+          <HeaderGlobalAction
+            aria-label="User Profile"
+            onClick={() => {}}
+            className="user-avatar-action"
+            tooltipAlignment="end"
+          >
+            <div className="user-avatar">
+              <span className="user-initials">HJ</span>
+            </div>
           </HeaderGlobalAction>
         </HeaderGlobalBar>
       </Header>
 
-      <Content>
+      <LeftNav />
+
+      <Content style={{ marginLeft: '48px' }}>
       </Content>
     </Theme>
   );
