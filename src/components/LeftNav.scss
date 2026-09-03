@@ -1,0 +1,171 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.left-nav {
+  position: fixed;
+  left: 0;
+  top: 48px; // Below header
+  height: calc(100vh - 48px);
+  width: 48px;
+  z-index: 8001;
+  display: flex;
+  flex-direction: column;
+  background: var(--cds-background, #161616);
+  border-top: 1px solid var(--cds-border-subtle-01, #525252);
+  border-right: 1px solid var(--cds-border-subtle-01, #525252);
+  padding: 16px 0;
+  
+  // AI Layer background
+  &__ai-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  &__ai-background {
+    position: absolute;
+    inset: 0;
+    background: var(--cds-background, #161616);
+  }
+  
+  &__ai-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(69, 137, 255, 0.16) 0%,
+      rgba(69, 137, 255, 0) 100%
+    );
+    box-shadow: inset 0px -80px 70px -65px rgba(69, 137, 255, 0.16);
+  }
+  
+  // SideNav container
+  &__sidenav {
+    position: relative !important;
+    width: 48px !important;
+    max-width: 48px !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+    flex: 1;
+    
+    // Override Carbon's positioning
+    &.cds--side-nav {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      width: 48px !important;
+      max-width: 48px !important;
+      background: transparent !important;
+    }
+  }
+  
+  // Navigation items container
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+
+    
+    .cds--side-nav__items {
+      padding: 0;
+    }
+  }
+  
+  // Individual navigation items
+  &__item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 16px !important;
+    min-height: 48px !important;
+    width: 48px !important;
+    position: relative !important;
+    background: transparent !important;
+    border: none !important;
+    
+    // Hide text labels for icon-only nav
+    span {
+      display: none !important;
+    }
+    
+    // Icon styling
+    .cds--side-nav__icon {
+      margin: 0 !important;
+      width: 19px !important;
+      height: 19px !important;
+      flex-shrink: 0 !important;
+      
+      // Force SVG to scale
+      svg {
+        width: 19px !important;
+        height: 19px !important;
+      }
+    }
+    
+    // Remove Carbon's default hover/focus styles
+    &:hover,
+    &:focus {
+      background: transparent !important;
+    }
+    
+    // Active state with darker background and blue left border
+    &--active {
+      position: relative;
+      background: #333 !important;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--cds-border-interactive, #0f62fe);
+        box-shadow: inset 3px 0 0 0 var(--cds-border-interactive, #0f62fe);
+      }
+    }
+  }
+  
+  // AI Label at bottom
+  &__ai-label-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 16px;
+  }
+  
+  &__ai-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+  
+  &__ai-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--cds-text-primary, #161616);
+    color: var(--cds-background, #ffffff);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    border: 1px solid var(--cds-border-inverse, #161616);
+    border-radius: 0;
+  }
+}
+
+// Made with Bob

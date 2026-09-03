@@ -1,0 +1,77 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.page-header {
+  background: linear-gradient(to right, #262626 37%, rgba(38, 38, 38, 0.5));
+  
+  &__breadcrumb {
+    padding: 11px $spacing-07 1px $spacing-07;
+  }
+
+  &__breadcrumb-link {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    text-decoration: none;
+    
+    &:hover {
+      color: $link-primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    padding: $spacing-05 $spacing-07 1em $spacing-07;
+  }
+
+  &__title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: $spacing-03;
+  }
+
+  &__title {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__action {
+    @include type-style('body-01');
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: var(--Link-link-primary, #78A9FF);
+    padding: 11px 16px;
+    cursor: pointer;
+    transition: background-color 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
+
+    &:hover {
+      background-color: rgba(141, 141, 141, 0.16);
+    }
+
+    &:focus {
+      outline: 2px solid $focus;
+      outline-offset: -2px;
+    }
+
+    span {
+      color: var(--Link-link-primary, #78A9FF);
+    }
+
+    svg {
+      color: var(--Link-link-primary, #78A9FF);
+    }
+  }
+
+  &__description {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    margin: 0;
+  }
+}
+
+// Made with Bob

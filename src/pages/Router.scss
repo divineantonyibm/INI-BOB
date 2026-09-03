@@ -1,0 +1,78 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.page-header {
+  background: linear-gradient(to right, #262626 37%, rgba(38, 38, 38, 0.5));
+  border-bottom: 1px solid $border-subtle-00;
+  width: 100%;
+
+  &__breadcrumb {
+    min-height: 30px;
+    padding: 11px $spacing-07 1px $spacing-07;
+  }
+
+  &__content {
+    padding: 0 $spacing-07;
+  }
+
+  &__title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: $spacing-03;
+    position: relative;
+  }
+
+  &__title {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__action {
+    @include type-style('body-01');
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-03;
+    background: transparent;
+    border: none;
+    color: var(--Link-link-primary, #78A9FF);
+    cursor: pointer;
+    padding: 11px $spacing-05;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      background: rgba(141, 141, 141, 0.12);
+    }
+
+    &:focus {
+      outline: 2px solid $focus;
+      outline-offset: -2px;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+      color: var(--Link-link-primary, #78A9FF);
+    }
+
+    svg {
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      color: var(--Link-link-primary, #78A9FF);
+    }
+  }
+
+  &__description {
+    @include type-style('body-short-01');
+    color: $text-secondary;
+    margin: 0;
+    padding-bottom: 1em;
+  }
+}
+
+// Made with Bob
