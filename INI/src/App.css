@@ -1,0 +1,58 @@
+@use '@carbon/react/scss/theme' as *;
+
+/* Site Name Styling */
+.site-name {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 15px 32px 15px 16px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--cds-border-subtle-01, #c6c6c6);
+}
+
+/* Hide Carbon's default prefix element */
+.cds--header__name--prefix {
+  display: none !important;
+}
+
+.site-name__prefix {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  color: var(--cds-text-primary, #161616);
+}
+
+.site-name__title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  color: var(--cds-text-primary, #161616);
+}
+
+/* User Avatar Styling */
+.user-avatar-action {
+  padding: 0 !important;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--cds-interactive-01, #0f62fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.user-initials {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--cds-text-on-color, #ffffff);
+  line-height: 1;
+  letter-spacing: -0.2625px;
+}
+
+/* Made with Bob */
