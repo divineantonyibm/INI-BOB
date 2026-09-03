@@ -1,4 +1,3 @@
-import { Settings } from '@carbon/icons-react';
 import './Router.scss';
 
 export default function Router() {

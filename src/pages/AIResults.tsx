@@ -1,4 +1,3 @@
-import { ChartLineSmooth } from '@carbon/icons-react';
 import './AIResults.scss';
 
 export default function AIResults() {

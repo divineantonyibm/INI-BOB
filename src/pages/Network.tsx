@@ -1,4 +1,3 @@
-import { Network_3 } from '@carbon/icons-react';
 import './Network.scss';
 
 export default function Network() {

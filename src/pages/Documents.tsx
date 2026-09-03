@@ -1,4 +1,3 @@
-import { Document } from '@carbon/icons-react';
 import './Documents.scss';
 
 const Documents = () => {
