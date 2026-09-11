@@ -187,7 +187,7 @@
   &__prompt-background {
     position: absolute;
     inset: 0;
-    background: var(--ai-chat-chat-prompt-background, white);
+    background: var(--ai-chat-chat-prompt-background, #262626);
   }
 
   &__prompt-border {
