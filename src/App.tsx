@@ -10,7 +10,7 @@ import {
 import {
   Information,
 } from '@carbon/icons-react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import LeftNav from './components/LeftNav';
 import ChatPanel from './components/ChatPanel';
 import NewChatIcon from './assets/new-chat.svg';
@@ -27,7 +27,7 @@ import './App.css';
 function App() {
 
   return (
-    <Router basename="/INI-concept">
+    <Router>
       <Theme theme="g100">
         <Header aria-label="INI Application">
           <HeaderName href="#" className="site-name">
