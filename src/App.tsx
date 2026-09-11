@@ -22,7 +22,7 @@ import Skills from './pages/Skills';
 import Tools from './pages/Tools';
 import DataSources from './pages/DataSources';
 import Documents from './pages/Documents';
-import './App.css';
+import './App.scss';
 
 function App() {
 
