@@ -37,6 +37,7 @@ const trackedInvestigations = [
 export default function Home() {
   return (
     <main className="home">
+    <p>hi world</p>
       <section className="home__welcome" aria-labelledby="welcome-title">
         <div className="home__welcome-heading">
           <div>
